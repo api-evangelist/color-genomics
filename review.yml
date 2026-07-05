@@ -1,0 +1,88 @@
+aid: color-genomics
+name: Color Health
+review:
+  question: Does Color expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-05'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Color Health does not publish any public
+    developer API - request/response, streaming, or otherwise - so there is no
+    documented server-push transport (WebSocket or SSE) to model. Color's platform
+    is enterprise/partner-gated; clinical data exchange with health systems is
+    handled through interoperability partners (e.g. Redox) using FHIR/HL7, which
+    carry their own protocols and are out of scope for a Color AsyncAPI document.
+findings:
+  summary: |
+    Color Health (founded as Color Genomics) does NOT publish a documented public
+    WebSocket API - nor any public, self-service developer API of any kind. Color
+    is a population health / precision health company operating a nationwide,
+    oncologist-led Virtual Cancer Clinic and delivering genetic testing
+    (hereditary cancer, cardiovascular, pharmacogenomics), cancer early detection
+    and screening, and clinical care management for employers, unions, health
+    plans, governments, and public health institutions. There is no developer
+    portal, no api.color.com / developers.color.com, no published REST/GraphQL
+    reference, and no SDKs. Access is contracted per enterprise/health-system
+    engagement, and clinical data exchange with EHRs is brokered through
+    interoperability partners such as Redox using FHIR/HL7. No realtime,
+    bidirectional, or streaming WebSocket (ws:// or wss://) endpoint is documented
+    anywhere on Color's own surface.
+  accessModel: |
+    Enterprise / partner-gated (B2B and B2G). Color sells and contracts programs
+    directly with employers, labor unions, health plans, governments, and public
+    health institutions; it does not offer public sign-up developer credentials.
+    Pricing is not published - it is contract/contact-sales for a sponsoring
+    organization. Individual consumers reach Color as members of a sponsoring
+    organization's program, not through an API.
+  openSource: |
+    Color's GitHub organization (github.com/color, ~41 repos) contains
+    bioinformatics and genomics tooling (e.g. cnvkit, clrsvsim, hisat-genotype,
+    aldy, risk-models) and internal developer utilities (clr, clrenv, clrypt),
+    most archived. None of these constitute a public product API, SDK, or client
+    library for Color's population health platform.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API reference is published. Any REST integration is contracted per engagement and not openly documented.
+    - protocol: FHIR / HL7
+      scheme: https
+      documented: false
+      note: Clinical data exchange with health systems is handled via interoperability partners such as Redox using FHIR/HL7. Not a Color-published open endpoint.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere on Color's surface as of the review date.
+  endpointsModeled: true
+  endpointsModeledNote: |
+    The APIs in apis.yml (Orders & Kits, Results, Members & Participants, Programs,
+    Clinical Data) are logical, honestly-modeled surfaces describing how a Color
+    population health program is typically integrated. They are NOT confirmed
+    public endpoints and no OpenAPI, Postman, plans, rate-limit, or FinOps
+    artifacts were fabricated for them.
+sources:
+  - url: https://www.color.com/
+    type: Website
+    note: Color Health home / product marketing. No developer or API section; access is via contracted programs.
+  - url: https://www.color.com/about-us/
+    type: About
+    note: Company background - population health programs for employers, unions, governments, public health.
+  - url: https://github.com/color
+    type: SourceCode
+    note: ~41 repos, bioinformatics/genomics tooling and internal utilities, mostly archived. No product API or SDK.
+  - url: https://www.redoxengine.com/healthcare-product/color/
+    type: Interoperability
+    note: Color integrates with health systems / EHRs through Redox (FHIR/HL7), not an open Color developer API.
+  - url: https://en.wikipedia.org/wiki/Color_Health
+    type: Reference
+    note: Company history (founded 2015 as Color Genomics), products, and population health focus.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists, and Color publishes no public developer
+    API at all. No AsyncAPI document was created because there is no server-push
+    transport on any Color-published API to model. apis.yml documents the provider
+    honestly as an enterprise/partner-gated platform with modeled logical API
+    surfaces (endpointsModeled) and no fabricated specification artifacts.
