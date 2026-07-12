@@ -103,6 +103,10 @@ apis:
     Real-world exchange uses FHIR/HL7 through interoperability partners such as Redox;
     Color itself does not publish an open FHIR endpoint or developer portal.
 common:
+- type: TrustCenter
+  url: security/color-genomics-trust-center.yml
+- type: DomainSecurity
+  url: security/color-genomics-domain-security.yml
 - type: Website
   url: https://www.color.com/
 - type: LinkedIn
