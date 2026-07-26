@@ -2,119 +2,46 @@ aid: color-genomics
 url: https://raw.githubusercontent.com/api-evangelist/color-genomics/refs/heads/main/apis.yml
 name: Color Health
 kind: company
-description: Color Health (founded as Color Genomics in 2015) is a population health
-  technology company that operates a nationwide, oncologist-led Virtual Cancer Clinic
-  and delivers population-scale precision health programs - hereditary cancer and
-  cardiovascular genetic testing, pharmacogenomics, cancer early detection and
-  screening, and clinical care management - for employers, unions, health plans,
-  governments, and public health institutions. Color does NOT publish a public,
-  self-service developer API. Access to its platform is enterprise/partner-gated and
-  contracted directly with organizations; data exchange with health systems and EHRs
-  is handled through interoperability partners (e.g. Redox) using FHIR/HL7 rather
-  than an open developer portal. The APIs listed here are logical, honestly-modeled
-  surfaces (endpointsModeled) that describe how such a program is typically
-  integrated - they are not confirmed public endpoints.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+description: Color Health (founded as Color Genomics in 2015) is a population health technology company that operates a nationwide, oncologist-led Virtual Cancer Clinic and delivers population-scale precision health programs - hereditary cancer and cardiovascular genetic testing, pharmacogenomics, cancer early detection and screening, and clinical care management - for employers, unions, health plans, governments, and public health institutions. Color does NOT publish a public, self-service developer API. Access to its platform is enterprise/partner-gated and contracted directly with organizations; data exchange with health systems and EHRs is handled through interoperability partners (e.g. Redox) using FHIR/HL7 rather than an open developer portal. The APIs listed here are logical, honestly-modeled surfaces (endpointsModeled) that describe how such a program is typically integrated - they are not confirmed public endpoints.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/color-genomics.png
 tags:
-- Health
-- Genomics
-- Genetic Testing
-- Precision Health
-- Population Health
-- Cancer Screening
-- Clinical
-- Enterprise
-- Gated
-created: '2026-07-05'
-modified: '2026-07-05'
-specificationVersion: '0.19'
-apis:
-- aid: color-genomics:color-orders-kits-api
-  name: Color Orders & Kits API (Modeled)
-  tags:
-  - Orders
-  - Kits
-  - Genetic Testing
-  - Modeled
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://www.color.com/
-  endpointsModeled: true
-  description: Modeled surface for placing and tracking genetic test orders and
-    sample-collection kits within a Color population health program - creating an
-    order for a participant, assigning and shipping a kit, and tracking kit status
-    from activation through lab receipt. Color does not publish this as a public API;
-    ordering is contracted and integrated per enterprise/health-system engagement.
-- aid: color-genomics:color-results-api
-  name: Color Results API (Modeled)
-  tags:
-  - Results
-  - Reports
+  - Health
   - Genomics
-  - Modeled
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://www.color.com/
-  endpointsModeled: true
-  description: Modeled surface for retrieving clinical genetic test results and
-    reports (hereditary cancer, cardiovascular, pharmacogenomics) for participants in
-    a program. In practice, results delivery to health systems is handled through
-    FHIR/HL7 interoperability partners such as Redox rather than an open Color
-    developer API.
-- aid: color-genomics:color-members-participants-api
-  name: Color Members & Participants API (Modeled)
-  tags:
-  - Members
-  - Participants
-  - Enrollment
-  - Modeled
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://www.color.com/
-  endpointsModeled: true
-  description: Modeled surface for enrolling and managing the members/participants of
-    an employer, union, or public-health population - eligibility, enrollment status,
-    demographics, and consent. Not a public API; membership integration is configured
-    per contracted program.
-- aid: color-genomics:color-programs-api
-  name: Color Programs API (Modeled)
-  tags:
-  - Programs
+  - Genetic Testing
+  - Precision Health
   - Population Health
-  - Screening
-  - Modeled
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://www.color.com/
-  endpointsModeled: true
-  description: Modeled surface for configuring and reporting on population health
-    programs - cancer early detection and screening campaigns, risk-based care
-    pathways, and aggregate program engagement/outcomes for a sponsoring
-    organization. Provided as a modeled surface only; Color exposes this through
-    contracted program dashboards and services, not a public developer API.
-- aid: color-genomics:color-clinical-data-api
-  name: Color Clinical Data API (Modeled)
-  tags:
-  - Clinical Data
-  - FHIR
-  - Interoperability
-  - Modeled
-  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-  humanURL: https://www.redoxengine.com/healthcare-product/color/
-  endpointsModeled: true
-  description: Modeled surface for exchanging clinical data (observations, diagnostic
-    reports, care-gap and screening status) between Color and a health system's EHR.
-    Real-world exchange uses FHIR/HL7 through interoperability partners such as Redox;
-    Color itself does not publish an open FHIR endpoint or developer portal.
+  - Cancer Screening
+  - Clinical
+  - Enterprise
+  - Gated
+created: '2026-07-05'
+modified: '2026-07-25'
+specificationVersion: '0.19'
+apis: []
 common:
-- type: TrustCenter
-  url: security/color-genomics-trust-center.yml
-- type: DomainSecurity
-  url: security/color-genomics-domain-security.yml
-- type: Website
-  url: https://www.color.com/
-- type: LinkedIn
-  url: https://www.linkedin.com/company/color
-- type: GitHubOrganization
-  url: https://github.com/color
-- type: Interoperability
-  url: https://www.redoxengine.com/healthcare-product/color/
+  - type: TrustCenter
+    url: security/color-genomics-trust-center.yml
+  - type: DomainSecurity
+    url: security/color-genomics-domain-security.yml
+  - type: Website
+    url: https://www.color.com/
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/color
+  - type: GitHubOrganization
+    url: https://github.com/color
+  - type: Interoperability
+    url: https://www.redoxengine.com/healthcare-product/color/
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+  - FN: Kin Lane
+    email: kin@apievangelist.com
