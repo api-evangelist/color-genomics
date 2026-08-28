@@ -3,6 +3,17 @@ url: https://raw.githubusercontent.com/api-evangelist/color-genomics/refs/heads/
 name: Color Health
 kind: company
 description: Color Health (founded as Color Genomics in 2015) is a population health technology company that operates a nationwide, oncologist-led Virtual Cancer Clinic and delivers population-scale precision health programs - hereditary cancer and cardiovascular genetic testing, pharmacogenomics, cancer early detection and screening, and clinical care management - for employers, unions, health plans, governments, and public health institutions. Color does NOT publish a public, self-service developer API. Access to its platform is enterprise/partner-gated and contracted directly with organizations; data exchange with health systems and EHRs is handled through interoperability partners (e.g. Redox) using FHIR/HL7 rather than an open developer portal. The APIs listed here are logical, honestly-modeled surfaces (endpointsModeled) that describe how such a program is typically integrated - they are not confirmed public endpoints.
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
